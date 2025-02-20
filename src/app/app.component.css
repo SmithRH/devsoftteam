@@ -1,0 +1,83 @@
+/* Importamos una fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+/* Estilos del Header */
+header {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 30px;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Barra de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content:right;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-blanco); /* Texto blanco */
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto hover en los botones del menú */
+.cta-button {
+    background: var(--color-negro); /* Botones negros */
+}
+
+.cta-button:hover {
+    background: var(--color-rojo); /* Botones rojos al hacer hover */
+    color: var(--color-blanco); /* Texto blanco */
+    box-shadow: 0px 4px 10px rgba(255, 152, 0, 0.5);
+}
+
+
+
+
+/* Estilos del Footer */
+footer {
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: auto;
+    backdrop-filter: blur(10px);
+}
+
+/* Media Query para hacerlo responsivo */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav ul li a {
+        display: block;
+        text-align: center;
+    }
+}

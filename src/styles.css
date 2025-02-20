@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --color-rojo: #E30A13;
+  --color-gris: #262626;
+  --color-dark: #262626;
+  --color-blanco: #FFFFFF;
+  --color-gris-claro: #F5F5F5;
+  --color-negro: #000000;
+}
+
+/* styles.css */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color:var(--color-dark); /* Color de fondo */
+}
