@@ -1,16 +1,6 @@
 /* Fuente y Variables */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-:root {
-    --azul-oscuro: #2c3e50;
-    --gris-claro: #ecf0f1;
-    --verde-menta: #1abc9c;
-    --gris-oscuro: #34495e;
-    --blanco: #ffffff;
-    --gris-dulce: #bdc3c7;
-    --azul-claro: #5f6fa6;
-    --cielo-azul: #00b0ff;
-    --rojo-acento: #ff6347;
-}
+
 
 /* Estilos globales */
 body {
