@@ -35,7 +35,7 @@ export class ProyectosService {
       nombre: 'mobilllllllll',
       descripcion: 'Desarrollo de una plataforma de comercio electrónico con Angular y Node.js.',
       categoria: 'Web',
-      imagenes: 'assets/imageshttps://plus.unsplash.com/premium_photo-1675088136288-7ad7f7682d54?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/ecommerce.jpg',
+      imagenes: 'https://drive.google.com/drive-viewer/AKGpihbYppbaVtWeUW-fYXtfJnOwpWCnQ5JAC4aJYt4oqgxcomeCWgkix5erpecHx82KOdW6lg4dXVuKt9JrVppVx3oOLpaRsSJ5DTI=w1920-h912-rw-v1',
       tecnologias: ['Angular', 'Node.js', 'MongoDB'],
     },
     
