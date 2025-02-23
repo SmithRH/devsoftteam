@@ -1,118 +1,482 @@
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
 
-header {
-    background: #007bff;
-    color: #fff;
-    padding: 50px 0;
+section#inicio {
+    height: 100vh; /* Asegura que la sección ocupe al menos toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    background: linear-gradient(135deg, #2c3e50, #1a1a1a);
+    padding: 20px;
     position: relative;
+    width: 100vw; /* Asegura que ocupe solo el ancho de la ventana */
+    max-width: 100%; /* Evita que se expanda más allá del tamaño de la pantalla */
+    overflow: hidden; /* Evita que el contenido desborde */
+    box-sizing: border-box; /* Asegura que padding no aumente el tamaño total */
 }
 
-header h1 {
+h1 {
+    font-size: 3rem;
     margin: 0;
-    font-size: 2.5em;
-    animation: fadeIn 1s ease-in;
+    animation: fadeInDown 1.5s ease-in-out;
 }
 
-header h2 {
+h2 {
+    font-size: 1.5rem;
     margin: 10px 0;
-    font-size: 1.5em;
-    animation: fadeIn 1.5s ease-in;
+    color: #b3b3b3;
+    animation: fadeInDown 2s ease-in-out;
 }
 
-header p {
+p {
+    font-size: 1rem;
     margin: 10px 0;
-    font-size: 1em;
-    animation: fadeIn 2s ease-in;
+    color: #b3b3b3;
+    animation: fadeInDown 2.5s ease-in-out;
 }
 
+/* Estilos para las redes sociales */
 .redes-sociales {
-    margin-top: 15px;
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    animation: fadeInUp 3s ease-in-out;
 }
 
 .redes-sociales a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 1.5em;
-    transition: transform 0.3s;
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .redes-sociales a:hover {
-    transform: scale(1.2);
+    color: #00a8ff;
+    transform: translateY(-5px);
 }
 
-/* Secciones */
-section {
-    padding: 20px;
-    margin: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    animation: slideIn 0.5s ease-in-out;
+/* Botón de scroll suave */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    transition: color 0.3s ease;
 }
 
-section h2 {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-}
-
-article {
-    margin-bottom: 20px;
-}
-
-article h3 {
-    margin: 0;
-    font-size: 1.2em;
-    color: #555;
-}
-
-/* Listas */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 5px 0;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #007bff;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.scroll-down:hover {
+    color: #00a8ff;
 }
 
 /* Animaciones */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
     }
-    to {
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateY(20px);
+@keyframes fadeInUp {
+    0% {
         opacity: 0;
+        transform: translateY(20px);
     }
-    to {
-        transform: translateY(0);
+    100% {
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* pa el perfil */
+/* Estilos generales para la sección perfil */
+section#perfil {
+    padding: 60px 20px;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    height: 100vh; /* Asegura que ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw; /* Asegura que ocupe solo el ancho de la ventana */
+    max-width: 100%; /* Evita que se expanda más allá del tamaño de la pantalla */
+    overflow: hidden; /* Evita que el contenido desborde */
+    box-sizing: border-box; /* Asegura que padding no aumente el tamaño total */
+}
+
+/* Contenedor de dos columnas */
+section#perfil .contenedor-perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px; /* Espacio entre las columnas */
+}
+
+/* Columna izquierda (Perfil) */
+section#perfil .columna-izquierda {
+    flex: 1;
+    text-align: left;
+}
+
+/* Columna derecha (Educación) */
+section#perfil .columna-derecha {
+    flex: 1;
+    text-align: left;
+}
+
+/* Estilos para el título */
+section#perfil h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00a8ff; /* Color azul para el título */
+    position: relative;
+    display: inline-block;
+}
+
+/* Efecto de subrayado animado para el título */
+section#perfil h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    background-color: #00a8ff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+section#perfil h2:hover::after {
+    transform: scaleX(1); /* Subrayado animado al hacer hover */
+}
+
+/* Estilos para el párrafo de perfil */
+section#perfil .columna-izquierda p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #b3b3b3; /* Texto gris claro */
+    opacity: 0; /* Inicialmente invisible para la animación */
+    transform: translateY(20px); /* Desplazamiento inicial para la animación */
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Animación al entrar */
+section#perfil .columna-izquierda p.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para la sección de educación */
+section#perfil .columna-derecha article.educacion {
+    background-color: #2c3e50; /* Fondo oscuro para la tarjeta */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Inicialmente invisible para la animación */
+    transform: translateY(20px); /* Desplazamiento inicial para la animación */
+}
+
+/* Animación al entrar */
+section#perfil .columna-derecha article.educacion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para el título de la educación */
+section#perfil .columna-derecha article.educacion h3 {
+    font-size: 1.5rem;
+    color: #00a8ff; /* Color azul para las fechas */
+    margin-bottom: 10px;
+}
+
+/* Estilos para el nombre de la carrera */
+section#perfil .columna-derecha article.educacion p strong {
+    font-size: 1.2rem;
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Estilos para la universidad */
+section#perfil .columna-derecha article.educacion p {
+    font-size: 1rem;
+    color: #b3b3b3; /* Texto gris claro */
+    margin-bottom: 20px;
+}
+
+/* Estilos para la barra de progreso */
+section#perfil .barra-progreso {
+    width: 100%;
+    background-color: #1e1e1e; /* Fondo oscuro para la barra */
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 10px;
+}
+
+section#perfil .barra-progreso .progreso {
+    height: 100%;
+    background-color: #00a8ff; /* Color azul para el progreso */
+    width: 80%; /* 8 de 10 ciclos completados */
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Texto de progreso */
+section#perfil .texto-progreso {
+    font-size: 0.9rem;
+    color: #b3b3b3; /* Texto gris claro */
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* para ecperienciaaaaaaaaaaasssssssssss */ 
+/* Estilos generales para la sección experiencia */
+section#experiencia {
+    height: 100vh; /* Usa height en lugar de min-height para que no se expanda más allá de la pantalla */
+    padding: 60px 20px;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    min-height: 100vh; /* Asegura que ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw; /* Asegura que ocupe solo el ancho de la ventana */
+    max-width: 100%; /* Evita que se expanda más allá del tamaño de la pantalla */
+    overflow: hidden; /* Evita que el contenido desborde */
+    box-sizing: border-box; /* Asegura que padding no aumente el tamaño total */
+}
+
+/* Estilos para el título */
+section#experiencia h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00a8ff; /* Color azul para el título */
+    position: relative;
+    display: inline-block;
+}
+
+/* Efecto de subrayado animado para el título */
+section#experiencia h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    background-color: #00a8ff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+section#experiencia h2:hover::after {
+    transform: scaleX(1); /* Subrayado animado al hacer hover */
+}
+
+/* Estilos para cada artículo (tarjeta de experiencia) */
+section#experiencia article {
+    background-color: #2c3e50; /* Fondo oscuro para las tarjetas */
+    border-radius: 10px;
+    padding:5px;
+    margin: 20px 0;
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Inicialmente invisible para la animación */
+    transform: translateY(20px); /* Desplazamiento inicial para la animación */
+}
+
+/* Animación al entrar */
+section#experiencia article.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto hover en las tarjetas */
+section#experiencia article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para el título de la experiencia */
+section#experiencia article h3 {
+    font-size: 1.5rem;
+    color: #00a8ff; /* Color azul para las fechas */
+    margin-bottom: 10px;
+}
+
+/* Estilos para el nombre de la empresa */
+section#experiencia article p {
+    font-size: 1.2rem;
+    color: #ffffff; /* Texto blanco */
+    margin-bottom: 15px;
+}
+
+/* Estilos para la lista de responsabilidades */
+section#experiencia article ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+section#experiencia article ul li {
+    font-size: 1rem;
+    color: #b3b3b3; /* Texto gris claro */
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Efecto hover en los elementos de la lista */
+section#experiencia article ul li:hover {
+    color: #00a8ff; /* Cambia el color al hacer hover */
+}
+
+
+/* hablidades */
+/* Estilos generales para la sección habilidades */
+section#habilidades {
+    height: 100vh; /* Usa height en lugar de min-height para que no se expanda más allá de la pantalla */
+    padding: 60px 20px;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw; /* Asegura que ocupe solo el ancho de la ventana */
+    max-width: 100%; /* Evita que se expanda más allá del tamaño de la pantalla */
+    overflow: hidden; /* Evita que el contenido desborde */
+    box-sizing: border-box; /* Asegura que padding no aumente el tamaño total */
+}
+
+/* Estilos para el título */
+section#habilidades h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00a8ff; /* Color azul para el título */
+    position: relative;
+    display: inline-block;
+}
+
+/* Efecto de subrayado animado para el título */
+section#habilidades h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    background-color: #00a8ff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+section#habilidades h2:hover::after {
+    transform: scaleX(1); /* Subrayado animado al hacer hover */
+}
+
+/* Contenedor de dos columnas */
+section#habilidades .contenedor-habilidades {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px; /* Espacio entre las columnas */
+}
+
+/* Columna de habilidades */
+section#habilidades .columna-habilidades {
+    flex: 1;
+    text-align: left;
+}
+
+/* Estilos para la lista de habilidades */
+section#habilidades ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+section#habilidades ul li {
+    font-size: 1.1rem;
+    color: #b3b3b3; /* Texto gris claro */
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+section#habilidades ul li strong {
+    color: #00a8ff; /* Color azul para los títulos de las habilidades */
+}
+
+/* Columna de logos */
+section#habilidades .columna-logos {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los logos */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para los logos */
+section#habilidades .columna-logos img {
+    width: 60px; /* Tamaño de los logos */
+    height: 60px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8; /* Opacidad inicial */
+}
+
+/* Efecto hover en los logos */
+section#habilidades .columna-logos img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+    opacity: 1; /* Opacidad completa al hacer hover */
 }
