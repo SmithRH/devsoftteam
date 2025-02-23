@@ -1,98 +1,119 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Smith Rodriguez Hurtado</title>
-    <!-- Enlace a Font Awesome para los íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <header>
-        <h1>SMITH RODRIGUEZ HURTADO</h1>
-        <h2>ING. DE SISTEMAS | Análisis de datos | Programador</h2>
-        <p>smith23 | +51 929 485 624 | Los Olivos – Lima</p>
+
+<section id="inicio" @fadeDown>
+    <h1>SMITH RODRIGUEZ HURTADO</h1>
+    <h2>Ing. De Sistemas | Análisis de datos | Programador</h2>
+    <p>Los Olivos - Lima</p>
+    
+    <!-- Redes Sociales -->
+    <div class="redes-sociales">
+        <a href="mailto:smith23@gmail.com" target="_blank" title="Gmail">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/SmithRH" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/smith-rodriguez-hurtado-8681892b3/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
         
-        <!-- Redes Sociales -->
-        <div class="redes-sociales">
-            <a href="mailto:smith23@gmail.com" target="_blank" title="Gmail">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://github.com/tuusuario" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/tuusuario" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://twitter.com/tuusuario" target="_blank" title="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://wa.me/51929485624" target="_blank" title="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+        <a href="https://wa.me/51929485624" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Botón de scroll suave -->
+    <a href="/Smith#perfil" class="scroll-down">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</section>
+
+<section id="perfil" @fadeIn>
+    <div class="contenedor-perfil">
+        <!-- Columna izquierda (Perfil) -->
+        <div class="columna-izquierda">
+            <h2>PERFIL</h2>
+            <p [class.visible]="true">
+                Estudiante de Ingeniería de Sistemas de la UNMSM, con sólidos conocimientos en análisis de datos y automatización de procesos. Experiencia en el manejo de herramientas como Excel avanzado, Power BI, y SQL para centralización de datos y creación de reportes interactivos. Competencias en Python para el desarrollo de soluciones automatizadas y análisis predictivo.
+                Además, cuento con habilidades en programación (web, móvil) y desarrollo de soluciones tecnológicas, incluyendo la creación de APIs y aplicaciones que integran bases de datos y flujos automatizados. Aplico metodologías ágiles para garantizar entregas eficientes y alineadas con los objetivos del equipo.
+            </p>
         </div>
-    </header>
 
-    <section>
-        <h2>PERFIL</h2>
-        <p>
-            Estudiante de Ingeniería de Sistemas en el 9° ciclo en la UNMSM, con sólidos conocimientos en análisis de datos y automatización de procesos. Experiencia en el manejo de herramientas como Excel avanzado, Power BI, y SQL para centralización de datos y creación de reportes interactivos. Competencias en Python para el desarrollo de soluciones automatizadas y análisis predictivo.
-            Además, cuento con habilidades en programación (web, móvil) y desarrollo de soluciones tecnológicas, incluyendo la creación de APIs y aplicaciones que integran bases de datos y flujos automatizados. Aplico metodologías ágiles para garantizar entregas eficientes y alineadas con los objetivos del equipo.
-        </p>
-    </section>
+        <!-- Columna derecha (Educación) -->
+        <div class="columna-derecha">
+            <article class="educacion" [class.visible]="true">
+                <h2>EDUCACIÓN</h2>
+                <h3>Marzo / 2020 - Actualidad</h3>
+                <p><strong>Ingeniería de Sistemas</strong></p>
+                <p>Universidad Nacional Mayor de San Marcos</p>
+                <p>Ciclo IX</p>
+                <!-- Barra de progreso -->
+                <div class="barra-progreso">
+                    <div class="progreso"></div>
+                </div>
+                <div class="texto-progreso">8 de 10 ciclos completados</div>
+            </article>
+        </div>
+    </div>
 
-    <section>
-        <h2>EXPERIENCIA PRE-PROFESIONAL</h2>
-        <article>
-            <h3>Abril/2023 – Julio/2023</h3>
-            <p><strong>Asistente área administrativa – HIDROVIAL CONTRATISTAS GENERALES S.A.C</strong></p>
-            <ul>
-                <li>Apoyo en la elaboración de estados financieros de la empresa</li>
-                <li>Generación de planillas con uso de macros en Excel</li>
-                <li>Instalación y actualización de software contable como CONTASIS CORP.</li>
-            </ul>
-        </article>
-        <article>
-            <h3>Agos/2024 – Oct/2024</h3>
-            <p><strong>Asistente área Tecnología e Informática – UGEL 365</strong></p>
-            <ul>
-                <li>Administrador de usuarios como correos institucionales con Workspace.</li>
-                <li>Soporte y mantenimiento de computadoras a nivel de software</li>
-                <li>Ayuda en uso de plataformas virtuales a maestros, así como capacitación de inteligencia artificial en instituciones educativas</li>
-            </ul>
-        </article>
-    </section>
+    <!-- Botón de scroll suave -->
+    <a href="/Smith#experiencia" class="scroll-down">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</section>
 
-    <section>
-        <h2>HABILIDADES</h2>
+<section id="experiencia" @fadeIn>
+    <h2>EXPERIENCIA PRE-PROFESIONAL</h2>
+    <article [class.visible]="true"> <!-- Añade la clase visible para la animación -->
+        <h3>Abril/2023 – Julio/2023</h3>
+        <p><strong>Asistente área administrativa – HIDROVIAL CONTRATISTAS GENERALES S.A.C</strong></p>
         <ul>
-            <li><strong>Análisis de datos:</strong> EXCEL – POWER BI (DAX) – SQL – PYTHON – PANDAS – NUMPY – MATPLOTLIB</li>
-            <li><strong>Programación:</strong> Python con Django para API´s – Angular para web – Kotlin para apps móviles android</li>
-            <li><strong>Otros:</strong> Rational Rose, Bizagui, Start UML, metodología scrum.</li>
+            <li>Apoyo en la elaboración de estados financieros de la empresa</li>
+            <li>Generación de planillas con uso de macros en Excel</li>
+            <li>Instalación y actualización de software contable como CONTASIS CORP.</li>
         </ul>
-    </section>
-
-    <section>
-        <h2>EDUCACIÓN</h2>
-        <article>
-            <h3>Marzo – 2020 - Actualidad</h3>
-            <p><strong>Ingeniería de Sistemas</strong></p>
-            <p>Universidad Nacional Mayor de San Marcos (9no ciclo)</p>
-        </article>
-        <article>
-            <h3>Marzo – 2020 - 2022</h3>
-            <p><strong>Ingeniería Mecánica de Fluidos</strong></p>
-            <p>Universidad Nacional Mayor de San Marcos</p>
-        </article>
-    </section>
-
-    <section>
-        <h2>IDIOMAS</h2>
+    </article>
+    <article [class.visible]="true"> <!-- Añade la clase visible para la animación -->
+        <h3>Agos/2024 – Oct/2024</h3>
+        <p><strong>Asistente área Tecnología e Informática – UGEL 365</strong></p>
         <ul>
-            <li>Español (Nativo)</li>
-            <li>Inglés (Intermedio)</li>
+            <li>Administrador de usuarios como correos institucionales con Workspace.</li>
+            <li>Soporte y mantenimiento de computadoras a nivel de software</li>
+            <li>Ayuda en uso de plataformas virtuales a maestros, así como capacitación de inteligencia artificial en instituciones educativas</li>
         </ul>
-    </section>
+    </article>
+    <a href="/Smith#habilidades" class="scroll-down">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Smith Rodriguez Hurtado. Todos los derechos reservados.</p>
-    </footer>
-</body>
+<section id="habilidades" @fadeIn>
+    <h2>HABILIDADES</h2>
+    <div class="contenedor-habilidades">
+        <!-- Columna de habilidades -->
+        <div class="columna-habilidades">
+            <ul>
+                <li><strong>Análisis de datos:</strong> EXCEL – POWER BI (DAX) – SQL – PYTHON – PANDAS – NUMPY – MATPLOTLIB</li>
+                <li><strong>Programación:</strong> Python con Django para API´s – Angular para web – Kotlin para apps móviles android</li>
+                <li><strong>Otros:</strong> Rational Rose, Bizagui, Start UML, metodología scrum.</li>
+            </ul>
+        </div>
+
+        <!-- Columna de logos -->
+        <div class="columna-logos">
+            <img src="https://cdn.worldvectorlogo.com/logos/microsoft-excel-2013.svg" alt="Excel">
+            <img src="https://1000marcas.net/wp-content/uploads/2022/08/Microsoft-Power-BI-Logo-2016.png" alt="Power BI">
+            <img src="https://logowik.com/content/uploads/images/azure-sql-database6354.jpg" alt="SQL">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXBdB0n0rD4RB3Wv1X0IDygZkG-bcZdCG4rA&s" alt="Python">
+            <img src="https://1000marcas.net/wp-content/uploads/2021/06/Django-Logo.png" alt="Django">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0-wnQQShczpqLhHmGImNKVTt9uAWsA93uxw&s" alt="Angular">
+            <img src="https://cdn-images-1.medium.com/max/480/1*jA64NTovT-efZ96tcq-X5g.png" alt="Kotlin">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHVIL5HpOsOFQWomhpmB5b8lTVQ9rIVnV9fg&s" alt="FIgma">
+            <img src="https://store-images.s-microsoft.com/image/apps.50222.23d9dda4-731e-4ef5-a402-73ce65ef358e.fb17f5dd-844b-4c05-a02b-a7325c283bd6.65f3e580-d090-470e-acc7-77f24b994944" alt="Bizagui">
+            <img src="https://upload.wikimedia.org/wikipedia/fr/3/32/Staruml_logo.png" alt="Start UML">
+            <img src="https://user-images.githubusercontent.com/68760595/164306020-120e8664-cb5b-459a-80a3-99e13b057b52.png" alt="Scrum">
+        </div>
+    </div>
+</section>
