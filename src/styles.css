@@ -9,6 +9,15 @@
   --color-blanco: #FFFFFF;
   --color-gris-claro: #F5F5F5;
   --color-negro: #000000;
+  --verde-menta: #1abc9c;
+  --azul-oscuro: #2c3e50;
+  --gris-claro: #ecf0f1;
+  --gris-oscuro: #34495e;
+  --blanco: #ffffff;
+  --gris-dulce: #bdc3c7;
+  --azul-claro: #5f6fa6;
+  --cielo-azul: #00b0ff;
+  --rojo-acento: #ff6347;
 }
 
 /* styles.css */
@@ -16,5 +25,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
   background-color:var(--color-dark); /* Color de fondo */
 }
