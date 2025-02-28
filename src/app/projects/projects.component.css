@@ -67,3 +67,22 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
   
+  .opcion {
+    background-color: #d50000; /* Rojo intenso */
+    color: white; /* Texto en blanco */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out; /* Transición suave */
+  }
+  
+  .opcion:hover {
+    background-color: #212121; /* Fondo negro */
+    box-shadow: 0 0 15px 5px rgba(213, 0, 0, 0.7); /* Resplandor rojo */
+  }
