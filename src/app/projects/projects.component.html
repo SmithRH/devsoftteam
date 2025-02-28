@@ -2,20 +2,26 @@
 
     <section class="proyectos-container">
         <div>
-            <h2>Nuentros Proyectos</h2>
+            <h2>Nuestros Proyectos</h2>
         </div>
         <div>
             <form>
-                <input type="text" placeholder=" filter">
-                <button class="primary" type="button">Buscar</button>
+                <!-- <input type="text" placeholder=" filter">
+                <button class="primary" type="button">Buscar</button> -->
+                @for (categoria of categorias; track categoria) {
+                    <button class="opcion" type="button" (click)="seleccionarCategoria(categoria)">{{ categoria }}</button>
+                }
             </form>
         </div>
         <div class="proyectos-grid">
-            <app-projects-details 
+            <!-- <app-projects-details 
                 *ngFor="let proyectosList of proyectosList"
                 [proyectosList]="proyectosList"
         
-            ></app-projects-details>
+            ></app-projects-details> -->
+            @for (proyecto of proyectosList; track proyecto.id) {
+                <app-projects-details [proyectosList]="proyecto"></app-projects-details>
+            }
         </div>
 
     </section>
